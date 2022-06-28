@@ -19,7 +19,7 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+  </head>
   <body>
     <header class="header hor">
       <div class="hor">
@@ -147,16 +147,14 @@
           Achieve your goals with Betterway
         </h3>
         <div class="hor gap-5">
-         <!-- learn a skill -->
+          <!-- learn a skill -->
           <div class="feature">
             <div class="feature-icon">
               <i class="fas fa-book"></i>
             </div>
             <div class="feature-text">
               <h4>Learn a skill</h4>
-              <p>
-                Learn a skill from a bootcamp or a course.
-              </p>
+              <p>Learn a skill from a bootcamp or a course.</p>
             </div>
           </div>
           <!-- collab -->
@@ -166,9 +164,7 @@
             </div>
             <div class="feature-text">
               <h4>Collab</h4>
-              <p>
-                Collaborate with other students to build your skills.
-              </p>
+              <p>Collaborate with other students to build your skills.</p>
             </div>
           </div>
           <!-- get hired -->
@@ -178,12 +174,9 @@
             </div>
             <div class="feature-text">
               <h4>Get Hired</h4>
-              <p>
-                Get hired by a company that you want to work for.
-              </p>
+              <p>Get hired by a company that you want to work for.</p>
             </div>
           </div>
-      
         </div>
       </div>
 
@@ -216,6 +209,47 @@
     </main>
 
     <!-- JavaScript -->
-    <script src="/assets/js/main.js"></script>
+    <script>
+      // js video event listener
+      document
+        .querySelectorAll(".video-container")
+        .forEach(function (videoContainer) {
+          let video = videoContainer.querySelector("video");
+          let soundBtn = videoContainer.querySelector(".sound-btn");
+          soundBtn.addEventListener("click", function () {
+            if (video.muted) {
+              video.muted = false;
+              soundBtn.innerHTML = '<i class="fa fa-volume-up"></i>';
+            } else {
+              video.muted = true;
+              soundBtn.innerHTML = '<i class="fa fa-volume-mute"></i>';
+            }
+          });
+          video.addEventListener("click", function () {
+            if (video.muted) {
+              video.muted = false;
+              soundBtn.innerHTML = '<i class="fa fa-volume-up"></i>';
+            } else {
+              video.muted = true;
+              soundBtn.innerHTML = '<i class="fa fa-volume-mute"></i>';
+            }
+          });
+
+          videoContainer.addEventListener("mouseover", function () {
+            video.play();
+            // remove active from all videos
+            document
+              .querySelectorAll(".video-container")
+              .forEach(function (videoContainer) {
+                videoContainer.classList.remove("active");
+              });
+            videoContainer.classList.add("active");
+          });
+
+          videoContainer.addEventListener("mouseout", function () {
+            video.pause();
+          });
+        });
+    </script>
   </body>
 </html>
