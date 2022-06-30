@@ -1,14 +1,113 @@
-body {
-  font-family: Inter;
+:root {
+  --dark: #2f2f3a;
+  --dark-solid: #0d0d27;
+  --light: #7d8890;
+  --lighter: #f4f7fc;
+  --shadow: #dcdfe6;
+  --success: #2ddaba;
+  --success-light: #dcfff8;
+  --danger: #ea4955;
+  --danger-light: #ffe9f6;
+  --warning: #ffbc02;
+  --warning-light: #fff0e1;
+  --primary: #1a92ff;
+  --primary-light: #d9edff;
+  --purple: #9e8fff;
+  --purple-light: #dfdaff;
+  --dark-pink: #ea4c89;
+  --dark-pink-light: #ff70a7;
+  --pink-light: #ffe6ef;
 }
+
+html,
+body {
+  font-family: "Inter";
+  overflow-x: hidden;
+}
+
 button:focus {
   outline: 0;
 }
+
+/* alignment */
 .hor {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.hor-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hor-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.hor-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* colors */
+.color-dark {
+  color: var(--dark);
+}
+.color-dark-solid {
+  color: var(--dark-solid);
+}
+.color-light {
+  color: var(--light);
+}
+.color-lighter {
+  color: var(--lighter);
+}
+.color-shadow {
+  color: var(--shadow);
+}
+.color-success {
+  color: var(--success);
+}
+.color-success-light {
+  color: var(--success-light);
+}
+.color-danger {
+  color: var(--danger);
+}
+.color-danger-light {
+  color: var(--danger-light);
+}
+.color-warning {
+  color: var(--warning);
+}
+.color-warning-light {
+  color: var(--warning-light);
+}
+.color-primary {
+  color: var(--primary);
+}
+.color-primary-light {
+  color: var(--primary-light);
+}
+.color-purple {
+  color: var(--purple);
+}
+.color-purple-light {
+  color: var(--purple-light);
+}
+.color-dark-pink {
+  color: var(--dark-pink);
+}
+.color-dark-pink-light {
+  color: var(--dark-pink-light);
+}
+.color-pink-light {
+  color: var(--pink-light);
+}
+
+/* header */
 .header {
   padding: 20px;
   padding-left: 50px;
@@ -16,6 +115,8 @@ button:focus {
 }
 .header .logo-name {
   font-weight: 700;
+  font-size: 20px;
+  margin-top: 6px;
 }
 .header .nav-btn {
   border: none;
@@ -40,9 +141,8 @@ button:focus {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .hero h4 {
   font-size: 20px;
@@ -55,6 +155,7 @@ button:focus {
 .hero p {
   font-size: 20px;
   font-weight: 400;
+  color: #838389;
 }
 .hero .get-started-btn {
   border: none;
@@ -74,8 +175,8 @@ button:focus {
 .hero .get-started-btn:hover i {
   transform: translateX(10px);
 }
+
 .videos {
-  height: 500px;
   position: relative;
   transition: 0.5s;
   display: flex;
@@ -84,27 +185,29 @@ button:focus {
   margin-top: 20px;
 }
 .video-container {
-  width: 200px;
+  width: 20%;
   height: 500px;
   position: relative;
   transition: 0.5s;
   cursor: pointer;
 }
+
 .video-container video {
   border-radius: 1rem;
   display: block;
-  height: 100%;
   max-height: none;
   min-height: 0;
   object-fit: cover;
   position: relative;
   width: 100%;
+  height: 100%;
 }
+
 .video-container.active {
-  width: 350px;
+  width: 40%;
 }
 .video-container:hover {
-  width: 350px;
+  width: 40%;
 }
 .video-container.active button {
   visibility: visible;
@@ -153,15 +256,13 @@ button:focus {
   margin-bottom: 50px;
 }
 .features {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 150px;
+  margin-bottom: 150px;
   padding-left: 50px;
   padding-right: 50px;
-  text-align: center;
 }
 .feature i {
   font-size: 50px;
-  color: #4137ff;
 }
 .feature h4 {
   font-size: 30px;
@@ -171,33 +272,138 @@ button:focus {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
 .learn {
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;
 }
-.learn .languages {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-}
 .learn .languages .language i {
-  font-size: 150px;
+  font-size: 50px;
+}
+.learn .languages .language h4 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
 }
 .learn .languages .language {
+  padding: 30px;
   border-radius: 10px;
-  padding: 50px;
   margin-right: 20px;
   margin-left: 20px;
   transition: 0.3s;
-  color: #0800ff;
+  color: var(--dark);
 }
-.learn .languages .language:hover {
-  box-shadow: 0 0 100px 0 rgba(0, 42, 255, 0.125);
+
+.learn .languages .language:nth-child(odd):hover {
+  color: var(--purple);
+  background-color: var(--purple-light);
 }
-.container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+.learn .languages .language:nth-child(even):hover {
+  color: var(--success);
+  background-color: var(--success-light);
+}
+
+.timeline-container {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.timeline-track {
+  position: absolute;
+  /* center */
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  width: 5px;
+  background: var(--primary-light);
+  height: 90%;
+  border-radius: 50px;
+}
+
+.timeline-line {
+  position: absolute;
+  /* center */
+  top: 0%;
+  left: 0;
+  width: 5px;
+  background: var(--primary);
+  height: 25%;
+  border-radius: 50px;
+}
+
+.timeline-line .thumb {
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  border: none;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: var(--primary);
+  color: white;
+}
+
+.timeline h4 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.cta {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 50px;
+}
+
+.cta .inner {
+  background: #5d55d9;
+  color: white;
+  border-radius: 30px;
+  padding: 50px;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+.cta .socials a {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  background: transparent;
+  width: 70px;
+  height: 70px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .timeline {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 700px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .timeline {
+    padding: 60px;
+  }
 }

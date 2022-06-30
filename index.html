@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
-    <!-- Bootstrap and font-awesome icons -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
       rel="stylesheet"
@@ -17,28 +16,53 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+  </head>
   <body>
-    <header class="header hor">
-      <div class="hor">
-        <img
-          class="mr-2"
-          src="https://www.earthfund.io/_next/image?url=%2Fimages%2Fearthfund.svg&w=48&q=75"
-          alt=""
-        />
-        <h4 class="logo-name">Better way</h4>
+    <header class="header">
+      <!-- mobile header -->
+      <div class="hor mobile-only">
+        <h4 class="logo-name">
+          <img
+            class="me-2"
+            src="https://www.earthfund.io/_next/image?url=%2Fimages%2Fearthfund.svg&w=48&q=75"
+            alt=""
+          />
+          Betterway
+        </h4>
+        <button class="menu-icon">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-      <div class="main-nav hor ml-10">
-        <button class="mr-4 nav-btn plain">Home</button>
-        <button class="mr-4 nav-btn plain">Bootcamps</button>
-        <button class="mr-4 nav-btn plain">About</button>
-        <button class="mr-4 nav-btn plain">Pricing</button>
-      </div>
-      <div class="hor">
-        <button class="nav-btn plain">Log In</button>
-        <button class="nav-btn">Free trial</button>
+
+      <!-- desktop -->
+      <div class="row desktop-only">
+        <div class="col-lg-2">
+          <h4 class="logo-name">
+            <img
+              class="me-2"
+              src="https://www.earthfund.io/_next/image?url=%2Fimages%2Fearthfund.svg&w=48&q=75"
+              alt=""
+            />
+            Betterway
+          </h4>
+        </div>
+        <div class="hor-center text-center col-lg-8 mx-auto">
+          <button class="mr-4 nav-btn plain">Home</button>
+          <button class="mr-4 nav-btn plain">Bootcamps</button>
+          <button class="mr-4 nav-btn plain">About</button>
+          <button class="mr-4 nav-btn plain">Pricing</button>
+        </div>
+        <div class="hor-right col-lg-2">
+          <button class="nav-btn plain">Log In</button>
+          <button class="nav-btn">Free trial</button>
+        </div>
       </div>
     </header>
 
@@ -55,7 +79,7 @@
         </button>
       </div>
 
-      <div class="videos mx-auto gap-2">
+      <div class="videos mx-auto container gap-2">
         <!--  a video that plays when hovering -->
         <div class="video-container first-last">
           <video loop muted>
@@ -115,27 +139,42 @@
       </div>
 
       <!-- logos -->
-      <div class="logos-container">
+      <div class="container text-center mt-5">
         <h3 class="mb-5 section-title">Where you might end up</h3>
         <div class="logos">
           <img
-            class="logo img-fluid"
+            class="col-1 img-fluid"
             src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
             alt=""
           />
           <img
-            class="logo img-fluid"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/1280px-Facebook_New_Logo_%282015%29.svg.png"
-            alt=""
-          />
-          <img
-            class="logo img-fluid"
+            class="col-1 img-fluid"
             src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
             alt=""
           />
           <img
-            class="logo img-fluid"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/1280px-Facebook_New_Logo_%282015%29.svg.png"
+            class="col-1 img-fluid"
+            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+            alt=""
+          />
+          <img
+            class="col-1 img-fluid"
+            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+            alt=""
+          />
+          <img
+            class="col-1 img-fluid"
+            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+            alt=""
+          />
+          <img
+            class="col-1 img-fluid"
+            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+            alt=""
+          />
+          <img
+            class="col-1 img-fluid"
+            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
             alt=""
           />
         </div>
@@ -146,76 +185,277 @@
         <h3 class="mb-5 section-title text-center">
           Achieve your goals with Betterway
         </h3>
-        <div class="hor gap-5">
-         <!-- learn a skill -->
-          <div class="feature">
-            <div class="feature-icon">
-              <i class="fas fa-book"></i>
-            </div>
+        <div class="row text-center">
+          <!-- learn a skill -->
+          <div class="feature col-lg-3">
+            <i class="fas fa-brain color-dark-pink-light"></i>
             <div class="feature-text">
-              <h4>Learn a skill</h4>
-              <p>
-                Learn a skill from a bootcamp or a course.
+              <h4>Learn the latest skills</h4>
+              <p class="text-left">
+                like business analytics, graphic design, Python, and more
               </p>
             </div>
           </div>
-          <!-- collab -->
-          <div class="feature">
-            <div class="feature-icon">
-              <i class="fas fa-users"></i>
-            </div>
+          <!-- learn a skill -->
+          <div class="feature col-lg-3">
+            <i class="fas fa-address-book color-success"></i>
             <div class="feature-text">
-              <h4>Collab</h4>
-              <p>
-                Collaborate with other students to build your skills.
+              <h4>Get ready for a career</h4>
+              <p class="text-left">
+                in high-demand fields like IT, AI and cloud engineering
               </p>
             </div>
           </div>
-          <!-- get hired -->
-          <div class="feature">
-            <div class="feature-icon">
-              <i class="fas fa-briefcase"></i>
-            </div>
+          <!-- learn a skill -->
+          <div class="feature col-lg-3">
+            <i class="fa fa-certificate color-purple"></i>
             <div class="feature-text">
-              <h4>Get Hired</h4>
-              <p>
-                Get hired by a company that you want to work for.
+              <h4>Earn <br />a degree</h4>
+              <p class="text-left">
+                from a leading university in business, computer science, and
+                more
               </p>
             </div>
           </div>
-      
+          <!-- learn a skill -->
+          <div class="feature col-lg-3">
+            <i class="fas fa-users color-primary"></i>
+            <div class="feature-text">
+              <h4>Upskill your organization</h4>
+              <p class="text-left">
+                with on-demand training and development programs
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- web dev language with font-awesome icons for each -->
-      <div class="learn container gap-5">
+      <div class="learn container text-center">
         <h3 class="section-title">
           100% Free Access To 10+ Bootcamps and Job Simulations
         </h3>
-        <div class="languages tex-center">
-          <div class="language">
+        <div class="row languages text-center">
+          <div class="language col">
             <i class="fab fa-react"></i>
             <h4>React</h4>
           </div>
           <!-- sass -->
-          <div class="language">
+          <div class="language col">
             <i class="fab fa-sass"></i>
             <h4>SASS</h4>
           </div>
           <!-- Nodejs -->
-          <div class="language">
+          <div class="language col">
             <i class="fab fa-node-js"></i>
             <h4>Nodejs</h4>
           </div>
-          <div class="language">
+          <div class="language col">
+            <i class="fab fa-js-square"></i>
+            <h4>JavaScript</h4>
+          </div>
+          <!-- Nodejs -->
+          <div class="language col">
+            <i class="fab fa-node-js"></i>
+            <h4>Nodejs</h4>
+          </div>
+          <div class="language col">
             <i class="fab fa-js-square"></i>
             <h4>JavaScript</h4>
           </div>
         </div>
       </div>
+
+      <!-- roadmap -->
+
+      <div class="col-lg-8 mx-auto timeline-container">
+        <h1 class="text-center section-title">Roadmap</h1>
+        <span class="timeline-track desktop-only">
+          <span class="timeline-line">
+            <span class="thumb"></span>
+          </span>
+        </span>
+
+        <div class="row">
+          <div class="col-lg-6 timeline">
+            <small>Applied Learning</small>
+            <h4>Find flexible, affordable options</h4>
+            <p>
+              Choose from many options including free courses and university
+              degrees at a breakthrough price. Learn at your own pace, 100%
+              online.
+            </p>
+          </div>
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6 timeline">
+            <small>Applied Learning</small>
+            <h4>Master skills with in-depth learning</h4>
+            <p>
+              Apply what you learn with self-paced quizzes and hands-on
+              projects. Get feedback from a global community of learners.
+            </p>
+          </div>
+          <div class="col-lg-6 timeline">
+            <small>Applied Learning</small>
+            <h4>Earn industry-recognized credentials</h4>
+            <p>
+              Demonstrate your new skills by sharing your Course Certificate,
+              Professional Certificate, MasterTrack™ Certificate, or diploma
+              with your network.
+            </p>
+          </div>
+          <div class="col-lg-6"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h3 class="section-title text-center text-capitalize">
+          From Betterway community <br />
+          1000+ people are already learning on Betterway
+        </h3>
+        <div class="videos mx-auto container gap-2">
+          <!--  a video that plays when hovering -->
+          <div class="video-container first-last">
+            <video loop muted>
+              <source
+                src="https://cdn.cameo.com/video/62b9830bec669bdaec71e2da-processed.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <button class="sound-btn">
+              <i class="fa fa-volume-mute"></i>
+            </button>
+          </div>
+          <div class="video-container">
+            <video loop muted>
+              <source
+                src="https://cdn.cameo.com/video/62b9830bec669bdaec71e2da-processed.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <button class="sound-btn">
+              <i class="fa fa-volume-mute"></i>
+            </button>
+          </div>
+          <div class="video-container active">
+            <video loop muted>
+              <source
+                src="https://cdn.cameo.com/video/62b9830bec669bdaec71e2da-processed.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <button class="sound-btn">
+              <i class="fa fa-volume-mute"></i>
+            </button>
+          </div>
+          <div class="video-container">
+            <video loop muted>
+              <source
+                src="https://cdn.cameo.com/video/62b9830bec669bdaec71e2da-processed.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <button class="sound-btn">
+              <i class="fa fa-volume-mute"></i>
+            </button>
+          </div>
+          <div class="video-container first-last">
+            <video loop muted>
+              <source
+                src="https://cdn.cameo.com/video/62b9830bec669bdaec71e2da-processed.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <button class="sound-btn">
+              <i class="fa fa-volume-mute"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <div class="row inner">
+          <div class="col-lg-6">
+            <h1 class="section-title">
+              Ready to learn?
+              <br />
+              <span> Sign up for a free trial </span>
+            </h1>
+          </div>
+          <div class="col-lg-6">
+            <!-- socials here -->
+            <div class="socials hor">
+              <a href="#">
+                <i class="fab fa-discord"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-reddit"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-telegram"></i>
+              </a>
+            </div>
+            <p class="mt-5 font-weight-bold">
+              Join over 10k+ students learning together
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <!-- JavaScript -->
-    <script src="/assets/js/main.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document
+        .querySelectorAll(".video-container")
+        .forEach(function (videoContainer) {
+          let video = videoContainer.querySelector("video");
+          let soundBtn = videoContainer.querySelector(".sound-btn");
+          soundBtn.addEventListener("click", function () {
+            if (video.muted) {
+              video.muted = false;
+              soundBtn.innerHTML = '<i class="fa fa-volume-up"></i>';
+            } else {
+              video.muted = true;
+              soundBtn.innerHTML = '<i class="fa fa-volume-mute"></i>';
+            }
+          });
+          video.addEventListener("click", function () {
+            if (video.muted) {
+              video.muted = false;
+              soundBtn.innerHTML = '<i class="fa fa-volume-up"></i>';
+            } else {
+              video.muted = true;
+              soundBtn.innerHTML = '<i class="fa fa-volume-mute"></i>';
+            }
+          });
+
+          videoContainer.addEventListener("mouseover", function () {
+            video.play();
+            // remove active from all videos
+            document
+              .querySelectorAll(".video-container")
+              .forEach(function (videoContainer) {
+                videoContainer.classList.remove("active");
+              });
+            videoContainer.classList.add("active");
+          });
+
+          videoContainer.addEventListener("mouseout", function () {
+            video.pause();
+          });
+        });
+    </script>
   </body>
 </html>
