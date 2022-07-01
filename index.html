@@ -21,29 +21,14 @@
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
-    />
+    /> 
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <!-- mobile header -->
-      <div class="hor mobile-only">
-        <h4 class="logo-name">
-          <img
-            class="me-2"
-            src="https://www.earthfund.io/_next/image?url=%2Fimages%2Fearthfund.svg&w=48&q=75"
-            alt=""
-          />
-          Betterway
-        </h4>
-        <button class="menu-icon">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-
-      <!-- desktop -->
-      <div class="row desktop-only">
-        <div class="col-lg-2">
+    <!-- Header nav -->
+    <nav class="navbar navbar-expand-lg header">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
           <h4 class="logo-name">
             <img
               class="me-2"
@@ -52,19 +37,42 @@
             />
             Betterway
           </h4>
-        </div>
-        <div class="hor-center text-center col-lg-8 mx-auto">
-          <button class="mr-4 nav-btn plain">Home</button>
-          <button class="mr-4 nav-btn plain">Bootcamps</button>
-          <button class="mr-4 nav-btn plain">About</button>
-          <button class="mr-4 nav-btn plain">Pricing</button>
-        </div>
-        <div class="hor-right col-lg-2">
-          <button class="nav-btn plain">Log In</button>
-          <button class="nav-btn">Free trial</button>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bootcamps</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+          <div class="d-flex col-lg-2">
+            <button class="nav-btn plain">Log In</button>
+            <button class="nav-btn">Free trial</button>
+          </div>
         </div>
       </div>
-    </header>
+    </nav>
 
     <main>
       <div class="hero">
@@ -180,6 +188,48 @@
         </div>
       </div>
 
+      <!-- roadmap -->
+      <div class="col-lg-8 mx-auto timeline-container">
+        <h1 class="text-center section-title">Roadmap</h1>
+        <span class="timeline-track desktop-only">
+          <span class="timeline-line">
+            <span class="thumb"></span>
+          </span>
+        </span>
+
+        <div class="row">
+          <div class="col-lg-6 timeline">
+            <small>Applied Learning</small>
+            <h4>Find flexible, affordable options</h4>
+            <p>
+              Choose from many options including free courses and university
+              degrees at a breakthrough price. Learn at your own pace, 100%
+              online.
+            </p>
+          </div>
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6 timeline">
+            <small>Applied Learning</small>
+            <h4>Master skills with in-depth learning</h4>
+            <p>
+              Apply what you learn with self-paced quizzes and hands-on
+              projects. Get feedback from a global community of learners.
+            </p>
+          </div>
+          <div class="col-lg-6 timeline">
+            <small>Applied Learning</small>
+            <h4>Earn industry-recognized credentials</h4>
+            <p>
+              Demonstrate your new skills by sharing your Course Certificate,
+              Professional Certificate, MasterTrack™ Certificate, or diploma
+              with your network.
+            </p>
+          </div>
+          <div class="col-lg-6"></div>
+        </div>
+      </div>
+
       <!-- features -->
       <div class="features container">
         <h3 class="mb-5 section-title text-center">
@@ -266,49 +316,6 @@
         </div>
       </div>
 
-      <!-- roadmap -->
-
-      <div class="col-lg-8 mx-auto timeline-container">
-        <h1 class="text-center section-title">Roadmap</h1>
-        <span class="timeline-track desktop-only">
-          <span class="timeline-line">
-            <span class="thumb"></span>
-          </span>
-        </span>
-
-        <div class="row">
-          <div class="col-lg-6 timeline">
-            <small>Applied Learning</small>
-            <h4>Find flexible, affordable options</h4>
-            <p>
-              Choose from many options including free courses and university
-              degrees at a breakthrough price. Learn at your own pace, 100%
-              online.
-            </p>
-          </div>
-          <div class="col-lg-6"></div>
-          <div class="col-lg-6"></div>
-          <div class="col-lg-6 timeline">
-            <small>Applied Learning</small>
-            <h4>Master skills with in-depth learning</h4>
-            <p>
-              Apply what you learn with self-paced quizzes and hands-on
-              projects. Get feedback from a global community of learners.
-            </p>
-          </div>
-          <div class="col-lg-6 timeline">
-            <small>Applied Learning</small>
-            <h4>Earn industry-recognized credentials</h4>
-            <p>
-              Demonstrate your new skills by sharing your Course Certificate,
-              Professional Certificate, MasterTrack™ Certificate, or diploma
-              with your network.
-            </p>
-          </div>
-          <div class="col-lg-6"></div>
-        </div>
-      </div>
-
       <div class="container">
         <h3 class="section-title text-center text-capitalize">
           From Betterway community <br />
@@ -385,29 +392,40 @@
           </div>
           <div class="col-lg-6">
             <!-- socials here -->
-            <div class="socials hor">
-              <a href="#">
+            <div class="socials row">
+              <a href="#" class="col">
                 <i class="fab fa-discord"></i>
               </a>
-              <a href="#">
+              <a href="#" class="col">
                 <i class="fab fa-reddit"></i>
               </a>
-              <a href="#">
+              <a href="#" class="col">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="#" class="col">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#">
+              <a href="#" class="col">
                 <i class="fab fa-telegram"></i>
               </a>
             </div>
-            <p class="mt-5 font-weight-bold">
+            <p class="text-center mt-3 font-weight-bold">
               Join over 10k+ students learning together
             </p>
           </div>
         </div>
       </div>
+
+      <!-- footer -->
+      <footer class="container footer">
+          <div class="">Copyright © 2022 betterway, LLC All Rights Reserved</div>
+          <div class="">
+            <a href="#" class="link">Privacy Policy</a>
+            <a href="#" class="link">Terms of Use</a>
+        </div>
+
+      </footer>
+
     </main>
 
     <!-- JavaScript Bundle with Popper -->
